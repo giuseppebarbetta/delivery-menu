@@ -56,9 +56,8 @@ function addToCart (name, price) {
   updateCartModal()
 }
 
-////////////////////////////////////
-
-function convertMoney (value) {
+//Formatar os valores em reais BRL
+function formatMoney (value) {
   return value.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
@@ -82,7 +81,7 @@ function updateCartModal () {
         <div>
           <p class='font-medium'>${item.name}</p>
           <p>Quantidade: ${item.quantity}</p>
-          <p class='font-medium mt-2'>${convertMoney(totalItem)}</p>
+          <p class='font-medium mt-2'>${formatMoney(totalItem)}</p>
         </div>
 
         <button class='px-2 bg-gray-400 rounded'>Remover</button>
@@ -98,6 +97,6 @@ function updateCartModal () {
     cartItemsContainer.appendChild(cartItemElement)
   })
 
-  cartTotal.innerText = convertMoney(total)
+  cartTotal.innerText = formatMoney(total)
   cartCounter.innerText = totalQuantity
 }
