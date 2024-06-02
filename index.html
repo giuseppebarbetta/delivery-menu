@@ -18,6 +18,7 @@
     <title>Dev Burguer - Menu</title>
   </head>
   <body>
+
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
       <div class="w-full h-full flex flex-col justify-center items-center">
         <img
@@ -34,6 +35,7 @@
         </div>
       </div>
     </header>
+
     <h2 class="text-2xl font-bold text-center md:text-4xl mt-9 mb-6">
       Conheça nosso menu
     </h2>
@@ -130,7 +132,7 @@
               prato e maionese da casa
             </p>
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="font-bold text-lg">R$ 31.50</p>
+              <p class="font-bold text-lg">R$ 26.50</p>
               <button
                 class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Chicken Salada"
@@ -157,7 +159,7 @@
             <div class="w-full">
               <p class="font-bold">Coca Cola lata</p>
               <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 05.50</p>
+                <p class="font-bold text-lg">R$ 5.50</p>
                 <button
                   class="bg-gray-900 px-5 rounded add-to-cart-btn"
                   data-name="Coca Cola Lata"
@@ -178,7 +180,7 @@
             <div class="w-full">
               <p class="font-bold">Guaraná lata</p>
               <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 05.50</p>
+                <p class="font-bold text-lg">R$ 5.50</p>
                 <button
                   class="bg-gray-900 px-5 rounded add-to-cart-btn"
                   data-name="guaraná lata"
@@ -195,13 +197,14 @@
 
     <div
       class="bg-black/70 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
     >
       <div class="bg-white p-5 rounded-md min-w-[80%] md:min-w-[50%]">
         <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
         <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
-        <p class="font-bold">Total: R$<span id="cart-total">0.00</span></p>
+        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
 
         <p class="font-bold mt-4">Endereço de entrega:</p>
         <input
@@ -234,5 +237,7 @@
         <i class="fa fa-cart-plus text-lg text-white"></i>
       </button>
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>
