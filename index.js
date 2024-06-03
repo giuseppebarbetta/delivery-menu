@@ -174,11 +174,14 @@ checkoutBtn.addEventListener("click", function () {
     cartWarn.classList.remove("hidden");
     addressWarn.classList.remove("hidden");
     addressInput.classList.add("border-red-500");
+    return
   } else if (addressInput.value === "") {
     addressWarn.classList.remove("hidden");
     addressInput.classList.add("border-red-500");
+    return
   } else if (cart.length === 0) {
     cartWarn.classList.remove("hidden");
+    return
   }
 
   //Send to api whatsApp
