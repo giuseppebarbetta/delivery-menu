@@ -11,3 +11,9 @@
 body {
   background-color: #f6f7f8;
 }
+
+.disable {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.5;
+}

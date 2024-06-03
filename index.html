@@ -2,8 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -14,11 +19,13 @@
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/output.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Dev Burguer - Menu</title>
   </head>
   <body>
-
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
       <div class="w-full h-full flex flex-col justify-center items-center">
         <img
@@ -136,7 +143,7 @@
               <button
                 class="bg-gray-900 px-5 rounded add-to-cart-btn"
                 data-name="Hamburguer Chicken Salada"
-                data-price="31.50"
+                data-price="26.50"
               >
                 <i class="fa fa-cart-plus text-lg text-white"></i>
               </button>
@@ -163,7 +170,7 @@
                 <button
                   class="bg-gray-900 px-5 rounded add-to-cart-btn"
                   data-name="Coca Cola Lata"
-                  data-price="05.50"
+                  data-price="5.50"
                 >
                   <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
@@ -184,7 +191,7 @@
                 <button
                   class="bg-gray-900 px-5 rounded add-to-cart-btn"
                   data-name="guaraná lata"
-                  data-price="05.50"
+                  data-price="5.50"
                 >
                   <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
@@ -213,13 +220,19 @@
           id="address"
           class="w-full border-2 p-1 rounded my-1"
         />
+        <p class="text-red-500 hidden text-xs" id="cart-warn">
+          Inclua ao menos um item no carinho para finalizar!
+        </p>
         <p class="text-red-500 hidden" id="address-warn">
           Digite seu endereço completo!
         </p>
 
         <div class="flex items-center justify-between mt-5 w-full">
           <button id="close-modal-btn">Fechar</button>
-          <button id="checkout" class="bg-green-500 text-white px-4 py-1 rounded">
+          <button
+            id="checkout"
+            class="bg-green-500 text-white px-4 py-1 rounded"
+          >
             Finalizar Pedido
           </button>
         </div>
@@ -233,11 +246,12 @@
         class="flex items-center gap-2 text-white font-bold"
         id="cart-btn"
       >
-        (<span id="cart-count">0</span>) Veja meu carrinho
+        (<span id="cart-count">0</span>) Itens no carrinho
         <i class="fa fa-cart-plus text-lg text-white"></i>
       </button>
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
