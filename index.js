@@ -170,16 +170,21 @@ checkoutBtn.addEventListener("click", function () {
     }).showToast()
     return;
   }
+  
   if (cart.length === 0 && addressInput.value === "") {
     cartWarn.classList.remove("hidden");
     addressWarn.classList.remove("hidden");
     addressInput.classList.add("border-red-500");
     return
-  } else if (addressInput.value === "") {
+  } 
+  
+  if (addressInput.value === "") {
     addressWarn.classList.remove("hidden");
     addressInput.classList.add("border-red-500");
     return
-  } else if (cart.length === 0) {
+  } 
+  
+  if (cart.length === 0) {
     cartWarn.classList.remove("hidden");
     return
   }
